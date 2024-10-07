@@ -1,0 +1,16 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # const 생성자 사용이 필수가 아님
+    prefer_const_constructors: false
+    #final 필드가 필수가 아님
+    prefer_final_fields: false 
+    #생성자의 키가 필수가 아님 
+    use_key_in_widget_constructors: false
+    #const 리터럴이 필수가 아니무니다
+    prefer_const_literals_to_create_immutables: false
+    #변경 불가능한 객체를 생성할때 const가 필수가 아님
+    prefer_const_constructors_in_immutables: false
+    #print 사용할때 제한 없음
+    avoid_print: false
