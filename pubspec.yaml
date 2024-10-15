@@ -1,0 +1,48 @@
+name: project3
+description: "A new Flutter project."
+publish_to: 'none' # 앱을 pub.dev에 배포하지 않음
+
+version: 1.0.0+1 # 앱의 버전 정보 (major.minor.patch+build)
+
+environment:
+  sdk: ^3.5.1 # Flutter SDK 버전
+
+dependencies:
+  flutter:
+    sdk: flutter # Flutter SDK 기본 패키지
+  supabase_flutter: ^2.6.0 # Supabase와 Flutter 통합 패키지
+  # supabase_flutter: ^0.3.0  # 최신 버전으로 업데이트
+  cupertino_icons: ^1.0.8 # iOS 스타일 아이콘 패키지 카카오 주소 api 사용을 위해 추가
+  intl: ^0.19.0 # 국제화 및 지역화 지원을 위한 패키지 (날짜, 시간, 숫자 형식 등)날짜형식 yyyy-MM-dd로 맞추기 위해 추가
+  http: ^1.0.0 # HTTP 요청을 처리하기 위한 패키지 (네트워크 통신)
+  flutter_dotenv: ^5.0.2 # 환경 변수를 관리하고 안전하게 로드하는 패키지
+  image_picker: ^0.8.8+5 # 이미지 선택 및 가져오기를 위한 패키지 (갤러리 또는 카메라 사용)
+  remedi_kopo: ^0.0.2 #카카오 주소 api 사용을위해 추가
+  uni_links: ^0.5.1 #signup_email에 이메일 인증 후 리다이렉트 하기위해 추가
+  # flutter_secure_storage: ^8.0.0 # 로컬에 민감한 데이터를 안전하게 저장하는 패키지
+  flutter_secure_storage: ^9.2.2 #사용자 접속 상태를 토큰상태로 저장하기 위해 추가
+  uuid: 4.4.0
+  postgrest: ^2.1.4
+  kakao_flutter_sdk_auth: ^1.2.2 #카카오 로그인 위해 추가
+  file_picker: ^5.0.0 #파일업로드용 웹까지 적용
+  bootpay: ^4.9.91 #결제 시스템 부트페이 사용하기
+  crypto: ^3.0.5 #sha-256으로 암호화하기 위해 추가
+
+dependency_overrides:
+  js: 0.6.4 # 부트페이 버전 충돌나는 패키지에 대해 강제로 버전 지정
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # Flutter 테스트 프레임워크
+  flutter_lints: ^4.0.0 # Flutter 코드 스타일 가이드라인을 위한 린트 패키지
+
+flutter:
+  uses-material-design: true # Material 디자인 테마 사용
+  
+  assets:
+    - assets/logo.png # 앱에서 사용하는 로고 이미지
+    - assets/mshop.png # 앱에서 사용하는 추가 이미지
+    - assets/ex.png # 앱에서 사용하는 추가 이미지
+    - assets/example.png # 앱에서 사용하는 추가 이미지
+    - assets/mypage.jpg # 앱에서 사용하는 추가 이미지
+    - assets/mainbanner.png # 메인베너 이미지 출력
